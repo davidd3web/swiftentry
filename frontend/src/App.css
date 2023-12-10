@@ -1,0 +1,431 @@
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem 0;
+  height: 100vh;
+}
+
+.background-colour-container {
+  position: absolute;
+  top: 0%;
+  right: -5rem;
+  width: 20%;
+  height: 100%;
+  background-color: var(--background-container);
+  z-index: -2;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App-header a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--link-color);
+}
+
+.App-header .link-style {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--button-color);
+  color: var(--button-text);
+  cursor: pointer;
+  transition: all o.3s ease-in-out;
+}
+
+/* FORMS */
+.App .form-container,
+.App .signin-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.App .form-container {
+  padding-left: 19.75rem;
+}
+
+.App .signin-form-container {
+  flex-direction: row-reverse;
+  padding-right: 19.75rem;
+}
+
+.App .forgotten-password-container,
+.App .new-password-container {
+  flex-direction: column;
+  padding: 0;
+}
+
+.create-form-inner-container {
+  position: relative;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.content > div {
+  overflow: hidden;
+  width: 100vw;
+  height: 100%;
+  margin-left: -5rem;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content > div > div{
+  width: 100%;
+}
+
+.App .input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.75rem;
+  min-width: 360px;
+}
+
+.App .input-field label {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.App .input-field input {
+  border-radius: 0.5rem;
+  border: 1px solid var(--link-color);
+  height: 35px;
+  padding: 8px;
+}
+
+.forgot-password-link {
+  display: block; 
+  margin-top: 1.5rem; 
+  color: var(--button-color); 
+  text-decoration: underline; 
+  font-size: 1.8rem;
+}
+
+.App .create-submit-container {
+  margin-top: 5.62rem;
+}
+
+.App .create-form-submit-btn {
+  background-color: var(--button-color);
+  color: var(--button-text);
+  border-radius: 2.5rem;
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0;
+  cursor: pointer;
+  
+}
+
+.input-field input.error {
+  border: 1px solid red;
+}
+
+.input-field input.valid {
+  border: 1px solid green;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.75rem;
+  padding-top: .5rem;
+  font-weight: bold;
+  display: none;
+}
+
+.input-field.error .error-message {
+  display: block;
+}
+
+.App .create-submit-container p {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.App #create-form-google-btn {
+  background-color: transparent;
+  color: var(--button-color);
+  border-radius: 2.5rem;
+  border: 1px solid var(--button-color);
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.App #create-form-google-btn svg {
+  margin-right: 2rem;
+}
+
+.watermark-form-word {
+  font-weight: bold;
+  position: absolute;
+  font-size: 30vh;
+  top: 50%;
+  opacity: 0.04; 
+  z-index: -3; 
+  max-width: 100%;
+  white-space: nowrap; 
+}
+
+.App .signin-form-container .watermark-form-word {
+  left: -150%;
+  z-index: -3; 
+}
+
+/* IMAGE SECTION */
+.create-image-container {
+  position: relative;
+  width: clamp(300px, 40vw, 700px); /* Adjust container width */
+  height: clamp(300px, 75vh, 1000px);
+  margin-right: -5rem;
+}
+
+.App .signin-form-container .create-image-container {
+  margin-right: 0;
+  margin-left: -5rem;
+}
+
+.create-image-container svg {
+  position: absolute;
+  z-index: -1;
+  top: -6.5rem;
+  left: -7rem;
+}
+
+.App .signin-form-container .create-image-container svg {
+  left: unset;
+  right: -7rem;
+  z-index: -1;
+}
+
+.create-image-container img {
+  border-radius: 3rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: var(--img-shadow);
+}
+
+.create-subheadline {
+  max-width: 50ch;
+  line-height: 150%;
+  padding: 2rem 4rem;
+  border-radius: 2rem;
+  position: absolute;
+  z-index: 1;
+  box-shadow: var(--container-shadow);
+}
+
+.create-subheadline.one {
+  background-color: var(--image-container-colour);
+  top: 30%;
+  left: -40%;
+}
+
+.App .signin-form-container .create-subheadline.one {
+  left: unset;
+  right: -40%;
+}
+
+.create-subheadline.two {
+  background-color: var(--image-container-colour-secondary);
+  bottom: -5%;
+  left: -10%;
+}
+
+.App .signin-form-container .create-subheadline.two {
+  left: unset;
+  right: -10%;
+}
+
+/* LIGHT / DARK MODE TOGGLE BTN */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: transform 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-checkbox:checked + .slider {
+  background-color: #2196F3;
+}
+
+.toggle-checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-checkbox:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* Enter and exit animations */
+
+.fade-enter {
+  opacity: 0;
+  position: absolute;
+}
+
+.fade-enter-done {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+/* Forgotten Password Page */
+.forgotten-password-container p {
+  margin-top: 3rem;
+}
+
+/* New Password Page */
+.new-password-container p {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .App .form-container {
+    padding-left: 5rem;
+  }
+
+  .App .signin-form-container {
+    padding-right: 5rem;
+  }
+
+  .create-image-container {
+    height: clamp(300px, 65vh, 800px);
+  }
+
+  .create-subheadline.one {
+    top: 50%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .App .form-container,
+  .App .signin-form-container {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 8rem;
+  }
+
+  .watermark-form-word {
+    font-weight: bold;
+    position: absolute;
+    font-size: 20vh;
+    top: 50%;
+    left: -50%;
+    opacity: 0.04; 
+    z-index: -1; 
+    max-width: 100%;
+    white-space: nowrap; 
+  }
+  
+  .App .signin-form-container .watermark-form-word {
+    left: -50%;
+  }
+
+  .create-image-container {
+    max-height: 28vh;
+    width: 80vw;
+  }
+
+  .create-subheadline.one {
+    left: 30%;
+  }
+
+  .App .signin-form-container .create-subheadline.one {
+    left: -5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  body {
+    margin: 0 2rem;
+  }
+
+  .content > div {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .App .form-container,
+  .App .signin-form-container {
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .create-form-inner-container {
+    width: 100%;
+  }
+
+  .watermark-form-word {
+    display: none;
+  }
+
+  .create-image-container {
+    display: none;
+  }
+
+  .background-colour-container {
+    right: -2rem;
+  }
+}

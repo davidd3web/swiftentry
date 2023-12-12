@@ -1,7 +1,3 @@
-Certainly! Here's a README template for your application, emphasizing its purpose and key features:
-
----
-
 # SwiftEntry: A Financial Management Web App
 
 ## Overview
